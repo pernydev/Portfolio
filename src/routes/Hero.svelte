@@ -1,11 +1,14 @@
 <script>
+	import "@fontsource/bonheur-royale";
 </script>
 
 <div class="positioner">
 	<header>
-		<div class="bottomfade" />
-		<h1>Sup, I'm <span>Perny</span>! 👋</h1>
+		<h1>Perny</h1>
 		<div class="ima">
+			<div>
+				<h3>UI/UX Designer</h3>
+			</div>
 			<div>
 				<h3>Software Engineer</h3>
 			</div>
@@ -20,37 +23,43 @@
 		<img
 			src="/perny.png"
 			alt="Perny"
-			width="600"
+			width="500"
 			height="auto"
 			style="image-rendering: pixelated;"
 		/>
+		<img
+			src="/heroglow.svg"
+			class="glow"
+			alt="Glow"
+		/>
+		<div class="bottomfade" />
 	</header>
 </div>
 
 <style>
 	header {
-		height: 80vh;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 
-    .positioner {
-        position: relative;
-        h
-    }
+	.positioner {
+		position: relative;
+		height: 80vh;
+		overflow: visible;
+	}
 
 	h1 {
-		margin-top: 15vh;
+		margin-top: 12vh;
 		font-size: 5rem;
-	}
-
-	h1 > span {
+		font-family: "Bonheur Royale", cursive;
 		color: var(--primary);
+		filter: brightness(1.2);
 	}
 
 	.ima {
-		font-size: 2rem;
+		font-size: 1.3rem;
 		margin-top: 2rem;
 
 		display: flex;
@@ -76,12 +85,22 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 10vh;
-		background: linear-gradient(transparent 0%, var(--bg-1));
+		height: 24vh;
+		background: linear-gradient(180deg, rgba(33, 37, 41, 0) 0%, rgba(52, 58, 64, 1) 100%);
+		z-index: 1;
 	}
 
 	img {
-        position: absolute;
-        bottom: 0;
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+	}
+
+	.glow {
+		position: absolute;
+		bottom: -5rem;
+		width: 90vw;
+		filter: blur(10px);
+		z-index: -1;
 	}
 </style>
